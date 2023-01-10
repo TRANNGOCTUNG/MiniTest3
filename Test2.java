@@ -23,18 +23,34 @@ public class Test2 {
         for(int item: array ){
             System.out.print(item + "\t");
         }
-        int max = array[0];
-        int index = 1;
-        int sum = 0;
-        for (int j = 0; j < array.length; j++) {
-            sum += array[j];
-            if (array[j] > max) {
-                max = array[j];
-                index++;
-
-            }
-        }
-        System.out.println("The largest property value in the list is " + max + " ,at position " + index);
-        System.out.println("the sum of the array is " + sum);
+//        int max = array[0];
+//        int index = 1;
+//        int sum = 0;
+//        for (int j = 0; j < array.length; j++) {
+//            sum += array[j];
+//            if (array[j] > max) {
+//                max = array[j];
+//                index++;
+//
+//            }
+//        }
+        System.out.println("The largest property value in the list is " + max(array));
+        System.out.println("the sum of the array is " + sum(array));
     }
+    public static int sum(int[]arr){
+        int sum = 0;
+        for(int item: arr){
+            sum += item;
+        }
+        return sum;
+    }
+    public static int max(int [] arr){
+        int max = arr[0];
+        for (int i = 0; i < arr.length; i++){
+            if(arr[i] > max);
+            max = arr[i];
+        }
+        return max;
+    }
+
 }
